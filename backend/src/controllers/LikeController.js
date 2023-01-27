@@ -8,6 +8,8 @@ module.exports = {
 
         await post.save();
 
+        req.io.emit('like', post); // emite um alerta para os usuarios da aplicacao
+
         return res.json(post);
     },
 };
