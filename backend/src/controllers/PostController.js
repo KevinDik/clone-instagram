@@ -6,7 +6,7 @@ const fs = require('fs');
 module.exports = {
     // retorna lista dos post cadastrados
     async index(req, res) {
-        const posts = await Post.find().sort('-createdAT');
+        const posts = await Post.find().sort('-createdAt');
 
         return res.json(posts);
     }, 
